@@ -1,4 +1,3 @@
-const API_BASE = "http://localhost:5000";
 
 export interface AnalyzeResponse {
   length: number;
@@ -8,7 +7,7 @@ export interface AnalyzeResponse {
 }
 
 export async function analyzePassword(password: string): Promise<AnalyzeResponse> {
-  const response = await fetch(`${API_BASE}/analyze`, {
+  const response = await fetch('${API_BASE}/analyze`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
